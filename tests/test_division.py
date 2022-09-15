@@ -6,13 +6,13 @@ from app import encryption_or_decryption_caesar
 @pytest.mark.parametrize(
     "cipher_text,shift_key,encryption_or_decryption_bool,result",
     [
-        ("Hello! I'm Mike, I'm 30 years.", 13, True, "Uryyb! V'z Zvxr, V'z 07 lrnef."),
-        ("Hello! I'm Mike, I'm 30 years.", -13, True, "Uryyb! V'z Zvxr, V'z 07 lrnef."),
-        ("Hello! I'm Mike, I'm 30 years.", 0, True, "Hello! I'm Mike, I'm 30 years."),
         ("Uryyb! V'z Zvxr, V'z 07 lrnef.", 13, False, "Hello! I'm Mike, I'm 30 years."),
         ("Uryyb! V'z Zvxr, V'z 07 lrnef.", -13, False, "Hello! I'm Mike, I'm 30 years."),
         ("Hello! I'm Mike, I'm 30 years.", 0, False, "Hello! I'm Mike, I'm 30 years."),
         ("Hello! I'm Mike, I'm 30 years.", 0, False, "Hello! I'm Mike, I'm 30 years."),
+        ("Hello! I'm Mike, I'm 30 years.", 13, True, "Uryyb! V'z Zvxr, V'z 07 lrnef."),
+        ("Hello! I'm Mike, I'm 30 years.", -13, True, "Uryyb! V'z Zvxr, V'z 07 lrnef."),
+        ("Hello! I'm Mike, I'm 30 years.", 0, True, "Hello! I'm Mike, I'm 30 years."),
     ],
 )
 def test_division(
